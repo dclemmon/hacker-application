@@ -2,9 +2,7 @@ Please answer the following general questions:
 
 1. What is your desired compensation range? (Range meaning the least you're comfortable with to the most you think you're worth.)
 
-        It was eye opening to look at house prices near where the company is located.  It doesn't
-        look like there's much under $500k outside of Longmont.
-            $85,000 - 95,000
+        $85,000 - 95,000
         
 2. When can you start?
 
@@ -38,7 +36,7 @@ Please answer the following general questions:
 
 7. The worldy developer is in touch with some form of culture (books, music, film, etc.). How do you go about feeding this part of your brain?
 
-        See music above
+        Playing and listening to music
         Learning French
 
 8. Please critique any of the SparkFun websites. With influence over the SparkFun dev team what would *you* focus on improving?
