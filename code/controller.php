@@ -6,7 +6,7 @@ class Controller{
 
     public $heading = 'User Information';
 
-    public function showUserList($userID){
+    public function showUserInfo($userID){
         $model = new Model();
         try {
             $userInfo = $model->getUserById($userID);
@@ -17,13 +17,29 @@ class Controller{
         if (!$userInfo){
             $view->body[] = '<h1>No User Content Found</h1>';
         } elseif (gettype(array_keys($userInfo)[0]) == 'integer') {
-            $this->body[] = var_dump($userInfo);
+            $view->body[] = '<div class="panel panel-default">';
+            $view->body[] = '<div class="panel-heading">' . $this->heading . '</div>';
+            $view->body[] = '<div class="panel-body">';
+            $view->body[] = '<div class="list-group">';
+            foreach ($userInfo as $key => $value){
+                $view->body[] = '<a href="?userID=' . $key . '" class="list-group-item">' . $value["Username"] . '</a>';
+            }
+            $view->body[] = '</div>';
+            $view->body[] = '</div>';
+            $view->body[] = '</div>';
         } else {
             $this->heading = $model->showName($userID);
             $view->body[] = '<div class="panel panel-default">';
             $view->body[] = '<div class="panel-heading">' . $this->heading . '</div>';
             $view->body[] = '<div class="panel-body">';
-            $view->body[] = 'Content';
+            $view->body[] = '<table class="table">';
+            foreach ($userInfo as $key => $value){
+                $view->body[] = '<tr>';
+                $view->body[] = "<td>$key</td>";
+                $view->body[] = "<td>$value</td>";
+                $view->body[] = '</tr>';
+            }
+            $view->body[] = '</table>';
             $view->body[] = '</div>';
             $view->body[] = '</div>';
         }

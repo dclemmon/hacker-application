@@ -2,7 +2,7 @@
 require "./controller.php";
 
 $controller = new Controller();
-$userId = $_GET['userID'];
-echo $controller->showUserList($userId);
+$userId = @$_GET['userID'];
+echo $controller->showUserInfo($userId);
 
 ?>

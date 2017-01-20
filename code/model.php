@@ -3,46 +3,46 @@
 class Model{
     // Create a dataset to simulate something found in a DB
     public $dataset = array(
-        array("first_name"=>"John",
-              "last_name"=>"Smith",
-              "username"=>"josmith",
-              "address"=>"1234 S First St",
-              "city"=>"Tulsa",
-              "state"=>"OK",
-              "postalCode"=>"74119"),
-        array("first_name"=>"Jane",
-              "last_name"=>"Smith",
-              "username"=>"jasmith",
-              "address"=>"3921 Pearl St",
-              "city"=>"Denver",
-              "state"=>"CO",
-              "postalCode"=>"80210"),
-        array("first_name"=>"William",
-              "last_name"=>"Branson",
-              "username"=>"wibranson",
-              "address"=>"5893 Drake St",
-              "city"=>"Fort Collins",
-              "state"=>"CO",
-              "postalCode"=>"80525"),
-        array("first_name"=>"Andrew",
-              "last_name"=>"Marick",
-              "username"=>"anmarick",
-              "address"=>"8214 Main St",
-              "city"=>"Raton",
-              "state"=>"NM",
-              "postalCode"=>"87740"),
-        array("first_name"=>"Mike",
-              "last_name"=>"Siever",
-              "username"=>"misiever",
-              "address"=>"8823 Crescent Cir",
-              "city"=>"Timnath",
-              "state"=>"CO",
-              "postalCode"=>"80547"),
+        array("First Name"=>"John",
+              "Last Name"=>"Smith",
+              "Username"=>"josmith",
+              "Address"=>"1234 S First St",
+              "City"=>"Tulsa",
+              "State"=>"OK",
+              "Postal Code"=>"74119"),
+        array("First Name"=>"Jane",
+              "Last Name"=>"Smith",
+              "Username"=>"jasmith",
+              "Address"=>"3921 Pearl St",
+              "City"=>"Denver",
+              "State"=>"CO",
+              "Postal Code"=>"80210"),
+        array("First Name"=>"William",
+              "Last Name"=>"Branson",
+              "Username"=>"wibranson",
+              "Address"=>"5893 Drake St",
+              "City"=>"Fort Collins",
+              "State"=>"CO",
+              "Postal Code"=>"80525"),
+        array("First Name"=>"Andrew",
+              "Last Name"=>"Marick",
+              "Username"=>"anmarick",
+              "Address"=>"8214 Main St",
+              "City"=>"Raton",
+              "State"=>"NM",
+              "Postal Code"=>"87740"),
+        array("First Name"=>"Mike",
+              "Last Name"=>"Siever",
+              "Username"=>"misiever",
+              "Address"=>"8823 Crescent Cir",
+              "City"=>"Timnath",
+              "State"=>"CO",
+              "Postal Code"=>"80547"),
     );
 
     public function getUserById($userId){
         // Get information from the model by userID (or array index in this case)
-        if (!$userId) {
+        if ($userId == NULL) {
             return $this->dataset;
         }
         if (!$this->checkId($userId)){
@@ -66,13 +66,13 @@ class Model{
         // this would allow access.  This is also where I would put data validation
         // and escaping to handle any attempted injections
         $this->dataset[] = array(
-            "first_name"=>$fname,
-            "last_name"=>$lname,
-            "username"=>$uname,
-            "address"=>$addr,
-            "city"=>$city,
-            "state"=>$state,
-            "postalCode"=>$pcode
+            "First Name"=>$fname,
+            "Last Name"=>$lname,
+            "Username"=>$uname,
+            "Address"=>$addr,
+            "City"=>$city,
+            "State"=>$state,
+            "Postal Code"=>$pcode
         );
     }
 
@@ -81,7 +81,7 @@ class Model{
             return NULL;
         }
         $userData = $this->dataset[$userId];
-        $name = $userData['first_name'] . ' ' . $userData['last_name'];
+        $name = $userData['First Name'] . ' ' . $userData['Last Name'];
         return $name;
     }
 
