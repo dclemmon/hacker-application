@@ -9,6 +9,13 @@ submissions demonstrating one or more of the following:
   - Clear, sensible, and consistently formatted code.
   - Sympathy for the plight of future maintainers.
 
+        I have an interesting challenge in that most of the representitive
+        code that I have created while working for my current employer
+        is owned by them, and not something I can include in this
+        application.  I have put together a MVC sample in PHP for the
+        purposes of this application.  I started with a base page from
+        www.getbootstrap.com and included their default CSS and JS
+
 If you maintain or contribute to any open source projects, please supply links
 and a short description of your role in each project.
 

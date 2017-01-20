@@ -14,7 +14,7 @@ In this directory, please include (at your option) either:
      preferred working environment).
 
         I don't use a lot of customization of my tools.  I find that when I switch
-        machines or environments this helps me out.  Vim is vim is vim is vim no matter
+        machines or environments this helps me out.  Vim is vim no matter
         the system I'm on if it's in a stock config.  My experience is that being 
         effective with the base tool is often more helpful than the extra features
         enabled by a custom config
